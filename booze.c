@@ -66,7 +66,6 @@ void flush(void)
 
 int get_first(void)
 {
-	// return first non-whitespace character
 	int ch;
 
 	do ch = getchar(); while (isspace(ch));
