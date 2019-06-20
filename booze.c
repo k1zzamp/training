@@ -8,6 +8,7 @@
 
 void flush(void);
 int get_first(void);
+float get_number(void);
 
 int main(void)
 {
@@ -18,19 +19,16 @@ int main(void)
 	while (1)
 	{
 		printf("How much did you had to drink?\n");
-		printf("Enter amount in LITERS in a format like 0 or 0.5 or 3.\n");
+		printf("Enter amount in LITERS in a format such as 2.5, -1.78E8, or 3.\n");
 
 		printf("Beer: ");
-		while (scanf("%f", &beer) != 1 || beer < 0)
-			printf("\nInvalid imput, try again.\n");
+		beer = get_number();
 
 		printf("Vine and martini: ");
-		while (scanf("%f", &vine) != 1 || beer < 0)
-			printf("\nInvalid imput, try again.\n");
+		vine = get_number();
 
 		printf("40%% spirit like whisky, vodka etc.: ");
-		while (scanf("%f", &spirit) != 1 || beer < 0)
-			printf("\nInvalid imput, try again.\n");
+		spirit = get_number();
 
 		result = beer * BEER + VINE * vine + VODKA * spirit;
 
@@ -74,4 +72,21 @@ int get_first(void)
 		continue;
 
 	return toupper(ch);
+}
+
+float get_number(void)
+{
+	int ch;
+	float num;
+
+	while (scanf("%f", &num) != 1)
+	{
+		while ((ch = getchar()) != '\n')
+			putchar(ch);
+
+		printf(" is not a number.\n");
+		printf("Please enter a number, such as 2.5, -1.78E8, or 3: ");
+	}
+
+	return num;
 }
