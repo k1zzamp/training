@@ -34,7 +34,7 @@ int main(void)
 
 		result = beer * BEER + VINE * vine + VODKA * spirit;
 
-		printf("\nYou drank %.2f BOTTLES of vodka.\n", result);
+		printf("\nYou drank %.2f %s of vodka.\n", result, (result > 1) ? "BOTTLES" : "BOTTLE");
 		printf("If you want to count again enter \"Y\", if you want to exit enter \"Q\": \n");
 
 		ch = get_first();
