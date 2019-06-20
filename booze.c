@@ -19,7 +19,7 @@ int main(void)
 	while (1)
 	{
 		printf("How much did you had to drink?\n");
-		printf("Enter amount in LITERS in a format such as 2.5, -1.78E8, or 3.\n");
+		printf("Enter amount in LITERS in a format such as 2.5, 1.78E8, or 3.\n");
 
 		printf("Beer: ");
 		beer = get_number();
@@ -85,7 +85,7 @@ float get_number(void)
 			putchar(ch);
 
 		printf(" is not a number.\n");
-		printf("Please enter a number, such as 2.5, -1.78E8, or 3: ");
+		printf("Please enter a number, such as 2.5, 1.78E8, or 3: ");
 	}
 
 	return num;
