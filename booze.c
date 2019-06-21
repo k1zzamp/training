@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-#define BEER 0.10
+#define BEER 0.20
 #define VODKA 2.00
-#define VINE 0.31
+#define VINE 0.60
 
 void flush(void);
 int get_first(void);
